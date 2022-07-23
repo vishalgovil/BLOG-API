@@ -2,8 +2,6 @@
 - name: Pull docker image of Blog_Api
   hosts: all
   tasks:
-    - name: Remove docker container
-      shell: docker rm --force blogapi
     - name: Remove image
       docker_image:
         name: vishalgovil/blog_api
