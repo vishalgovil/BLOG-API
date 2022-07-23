@@ -10,5 +10,3 @@
     - name: Pull new image
       docker_image:
         name: vishalgovil/blog_api
-    - name: Run docker container
-      shell: docker run --name blogapi -it vishalgovil/blog_api 
