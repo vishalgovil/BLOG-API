@@ -1,2 +1,2 @@
 [ubuntu18]
-127.0.0.1 ansible_user=vishal
+1172.16.132.204 ansible_user=vishal
