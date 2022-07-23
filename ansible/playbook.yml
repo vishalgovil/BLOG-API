@@ -1,0 +1,16 @@
+---
+- name: Pull docker image of Blog_Api
+  hosts: all
+  tasks:
+    - name: Remove docker container
+      shell: docker rm --force blogapi
+    - name: Remove image
+      docker_image:
+        name: vishalgovil/blog_api
+        state: absent
+        force: yes
+    - name: Pull new image
+      docker_image:
+        name: vishalgovil/blog_api
+    - name: Run docker container
+      shell: docker run --name blogapi -it vishalgovil/blog_api 
